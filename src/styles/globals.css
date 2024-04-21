@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+   background: rgb(7, 7, 7);
+   width: 100vw;
+   height: 100vh;
+   overflow-x: hidden;
+}
+
+#__next {
+   position: relative;
+   width: 100%;
+   height: 100%;
+}
+
+#background {
+   position: fixed;
+   width: 100%;
+   height: 100%;
+   top: 0;
+}
+
+#bg-gradient {
+   width: 100%;
+   height: 100%;
+   background-size: cover;
+   background-image: url("../../public/images/bg-mesh-gradient.png");
+   background-position-y: center;
+}
+
+#mouse-hover {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+}
+
+#mouse-radial-gradient {
+   position: absolute;
+   background: radial-gradient(circle closest-side, rgba(19, 44, 78, 0.2) 35%, transparent);
+   width: 600px;
+   height: 600px;
+}
+
+@media screen and (max-width: 700px) {
+   #mouse-hover {
+      display: none;
+   }
+
+   #mouse-radial-gradient {
+      display: none;
+   }
+}
+
+#dot-grid {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-image: radial-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 0);
+   background-size: 35px 35px;
+}
+
+#foreground {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   max-width: 700px;
+   height: 100%;
+   padding: 52.5px 50px;
+   z-index: 2;
+}
+
+@media screen and (max-width: 700px) {
+   #foreground {
+      padding: 25px;
+   }
+}
