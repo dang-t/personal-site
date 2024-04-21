@@ -70,7 +70,7 @@ export default function Index() {
          ))}
       </div>
       {/* tech */}
-      <h2 className="text-white text-lg mt-5 mb-3">technologies</h2>
+      <h2 className="text-white text-lg mt-5 mb-3">tech stack</h2>
       <div className="flex flex-wrap gap-1.5 pb-10">
          {Tech.map((techStack, index) => (
             <div key={`techstack-${index}`} className="flex items-center gap-1 text-white/50 bg-white/5 hover:bg-white/10 backdrop-blur-[1px] w-fit px-2 pr-2.5 py-1 rounded duration-200">

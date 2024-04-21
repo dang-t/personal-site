@@ -11,7 +11,7 @@ type Song = {
    url: string
 }
 
-export default function Fun() {
+export default function Music() {
    const lanyard = GetLanyardData();
    const { data } = useSWR("/recent-tracks");
 
@@ -19,7 +19,7 @@ export default function Fun() {
       {lanyard === undefined ? null :
          <>
             {/* music */}
-            <h2 className="text-white text-lg mt-4 mb-2">music</h2>
+            <h2 className="text-white text-lg mt-4 mb-2">status</h2>
             {
                !lanyard.listening_to_spotify
                   ?
