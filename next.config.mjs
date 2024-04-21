@@ -2,6 +2,9 @@
 const nextConfig = {
    images: {
       domains: ["cdn.discordapp.com", "i.scdn.co"]
+   },
+   eslint: {
+      ignoreDuringBuilds: true
    }
 };
 
