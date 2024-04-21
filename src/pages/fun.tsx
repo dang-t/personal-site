@@ -70,7 +70,7 @@ export default function Fun() {
                         data.map((song: Song) => (
                            <div key={`${song.artist}-${song.name}`} className="relative bg-white/5 hover:bg-white/10 backdrop-blur-[1px] aspect-square w-full p-3 rounded-lg duration-200 group">
                               <Image
-                                 className="w-full h-full min-w-[80px] rounded-lg group-hover:opacity-20 group-hover:scale-105 duration-200"
+                                 className="w-full aspect-square min-w-[80px] rounded-lg group-hover:opacity-20 group-hover:scale-105 duration-200"
                                  src={song.imageURL}
                                  alt=""
                                  width={100}
