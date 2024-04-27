@@ -1,8 +1,10 @@
 import { GetLanyardData } from "@hooks/lanyard"
 import { PiQuestion } from "react-icons/pi"
-import Image from "next/image";
-import Link from "next/link";
-import useSWR from "swr";
+import { AiOutlineLoading3Quarters } from "react-icons/ai"
+import Image from "next/image"
+import Link from "next/link"
+import useSWR from "swr"
+import clsx from "clsx"
 
 type Song = {
    artist: string
@@ -62,7 +64,13 @@ export default function Music() {
                   </div>
             }
             {/* recently played */}
-            <h2 className="text-white text-lg mt-4 mb-2">recent</h2>
+            <h2 className="flex items-center text-white text-lg mt-4 mb-2">
+               <div>recent</div>
+               <AiOutlineLoading3Quarters className={clsx(
+                  "text-white/70 animate-spin w-3.5 h-3.5 mt-1 ml-2 duration-200",
+                  data === undefined ? "opacity-100" : "opacity-0"
+               )} />
+            </h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 pb-10">
                {data === undefined ? null :
                   <>
