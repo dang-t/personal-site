@@ -31,7 +31,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <SWRConfig value={{
             fetcher: (url: string) => fetch(`/api${url}`).then((res) => res.json())
         }}>
-            <main className={`${textFont.variable} ${displayFont.variable}`}>
+            <main className={`${textFont.variable} ${displayFont.variable} font-text`}>
                 <Component {...pageProps} />
             </main>
         </SWRConfig>
