@@ -24,7 +24,7 @@ export default function Header() {
         window.addEventListener("resize", () => {
             setMobile(window.innerWidth < 640);
         })
-    }, [])
+    }, [mounted])
 
     const handleThemeChange = () => {
         if (theme === "system") {
@@ -96,6 +96,7 @@ export default function Header() {
                         >
                             {pageSections.map((section) => (
                                 <NextLink
+                                    key={section}
                                     className="group even:border-x-[1px] border-black/20 dark:border-white/20 px-1 py-1"
                                     href={`/#${section.toLowerCase()}`}
                                 >
