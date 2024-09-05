@@ -15,7 +15,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <body className={`${textFont.variable} ${displayFont.variable} font-text`}>
                 <ThemeProvider attribute="class">
                     <Header />
-                    <main>{children}</main>
+                    <main className="px-8">{children}</main>
                 </ThemeProvider>
             </body>
         </html >
