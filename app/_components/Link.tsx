@@ -10,7 +10,7 @@ export default function Link({
     target?: "_self" | "_blank"
 }) {
     return (
-        <NextLink title={title} className="group" href={href} target={target}>
+        <NextLink title={target === "_blank" ? title : ""} className="group inline-block" href={href} target={target}>
             <span>{title}</span>
             <span className="block bg-block dark:bg-white w-full h-0.5 scale-x-0 group-hover:scale-x-100 duration-200" />
         </NextLink >
