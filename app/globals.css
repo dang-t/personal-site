@@ -2,12 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+html body {
+    scroll-behavior: smooth;
     background-color: white;
     color: black;
 }
 
-[data-theme="dark"] body {
+html.dark body {
     background-color: black;
     color: white;
 }

@@ -1,5 +1,3 @@
-// music
-
 export type RecentTracks = {
     artist: string,
     title: string,
@@ -8,14 +6,12 @@ export type RecentTracks = {
     url: string,
 }[]
 
-
 export type TopArtists = {
     name: string,
     streams: string,
     image: string,
     url: string,
 }[]
-
 
 export type TopTracks = {
     artist: string,
