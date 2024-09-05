@@ -1,7 +1,7 @@
 "use client"
 import { useEffect, useState } from "react";
 import { PiStarFourFill } from "react-icons/pi";
-import { LuCloudMoon, LuSun } from "react-icons/lu";
+import { LuCloudMoon, LuCloudSun } from "react-icons/lu";
 import { useTheme } from "next-themes";
 import { motion } from "framer-motion";
 import NextLink from "next/link";
@@ -31,7 +31,7 @@ export default function Header() {
         <header className="fixed top-0 bg-[--background] w-full h-[72px] px-8 py-6 z-10">
             <NextLink href={"/"} className="inline-flex items-center gap-2">
                 <PiStarFourFill className="w-4 h-4" />
-                <span className="font-display font-bold">Dang Tran</span>
+                <span className="font-display font-bold text-lg">Dang Tran</span>
             </NextLink>
             <div className="inline-flex items-center gap-6 float-right pt-0.5">
                 <Link title="Projects" href="/#projects" />
@@ -48,7 +48,7 @@ export default function Header() {
                             >
                                 {theme === "dark"
                                     ? <LuCloudMoon className="w-5 h-5" />
-                                    : <LuSun className="w-5 h-5" />
+                                    : <LuCloudSun className="w-5 h-5" />
                                 }
                             </motion.span>
                         </button>
