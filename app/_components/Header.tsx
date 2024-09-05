@@ -8,6 +8,7 @@ import NextLink from "next/link";
 import Link from "./Link";
 
 export default function Header() {
+    const pageSections = ["Projects", "About", "Talks"];
     const [mounted, setMounted] = useState<boolean>(false);
     const { theme, setTheme } = useTheme();
 
@@ -34,9 +35,21 @@ export default function Header() {
                 <span className="font-display font-bold text-lg">Dang Tran</span>
             </NextLink>
             <div className="inline-flex items-center gap-6 float-right pt-0.5">
-                <Link title="Projects" href="/#projects" />
-                <Link title="About" href="/#about" />
-                <Link title="Talks" href="/#talks" />
+                <motion.div
+                    className="flex gap-6"
+                    transition={{ staggerChildren: 0.15 }}
+                    initial="hidden"
+                    animate="visible"
+                >
+                    {pageSections.map((section) => (
+                        <motion.span key={section} variants={{
+                            hidden: { opacity: 0, translateX: 15, filter: "blur(3px)" },
+                            visible: { opacity: 1, translateX: 0, filter: "blur(0px)" }
+                        }}>
+                            <Link title={section} href={`/#${section.toLowerCase()}`} />
+                        </motion.span>
+                    ))}
+                </motion.div>
                 {/* theme button */}
                 <div className="w-6 h-6">
                     {!mounted ? null :
