@@ -35,8 +35,8 @@ export default function Header() {
             </NextLink>
             <div className="inline-flex items-center gap-6 float-right pt-0.5">
                 <Link title="Projects" href="/#projects" />
-                <Link title="About" href="/#About" />
-                <Link title="Talks" href="/#About" />
+                <Link title="About" href="/#about" />
+                <Link title="Talks" href="/#talks" />
                 {/* theme button */}
                 <div className="w-6 h-6">
                     {!mounted ? null :
