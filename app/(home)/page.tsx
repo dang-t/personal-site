@@ -6,7 +6,7 @@ import Link from "@/_components/Link";
 export default function Page() {
     return (
         <>
-            <section id="cover" className="relative grow mt-[124px] h-[calc(100vh-124px)]">
+            <section id="cover" className="relative grow pt-[124px] h-screen">
                 <div id="intro" className="max-w-sm sm:max-w-md">Hello, I'm a computer science student from Virginia learning everything and anything I can about software.</div>
                 <motion.div
                     className="sm:absolute sm:bottom-0 sm:left-0 flex flex-col sm:flex-row gap-2 sm:gap-6 w-full mt-16 sm:mb-[64px]"

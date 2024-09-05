@@ -40,7 +40,7 @@ export default function Header() {
 
     return (
         <header className="fixed top-0 bg-[--background] w-full h-[72px] px-8 py-6 z-10">
-            <NextLink href={"/"} className="inline-flex items-center gap-2">
+            <NextLink href={"/#cover"} className="inline-flex items-center gap-2">
                 <PiStarFourFill className="w-4 h-4" />
                 <span className="font-display font-bold text-lg">Dang Tran</span>
             </NextLink>
