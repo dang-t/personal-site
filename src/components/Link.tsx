@@ -1,0 +1,14 @@
+import NextLink from "next/link"
+
+export default function Link({ title, href, target = "_self" }: { title: string, href: string, target?: "_self" | "_blank" }) {
+    return (
+        <NextLink
+            className="group"
+            target={target}
+            href={href}
+        >
+            <span>{title}</span>
+            <span className="block bg-black dark:bg-white w-full h-0.5 scale-x-0 group-hover:scale-x-100 duration-200" />
+        </NextLink>
+    )
+}
