@@ -55,7 +55,8 @@ export default function Header() {
                     }
                 </div>
             </div>
-            <div id="header-overlay" className="absolute top-full left-0 bg-gradient-to-t from-transparent to-[--background] backdrop-blur-sm w-full h-[44px] z-10" />
+            <div id="blur-overlay-top" className="absolute top-full left-0 bg-gradient-to-t from-transparent to-[--background] backdrop-blur-sm w-full h-[44px] z-10" />
+            <div id="blur-overlay-bottom" className="fixed bottom-0 left-0 bg-gradient-to-t from-[--background] to-transparent backdrop-blur-sm w-full h-[64px] z-10" />
         </header>
     )
 }
