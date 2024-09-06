@@ -11,15 +11,18 @@
 :root.dark {
     --background: rgb(0, 0, 0);
     --foreground: rgb(255, 255, 255);
-    --highlight: rgb(255, 255, 255, 0.15);
+    --highlight: rgb(255, 255, 255, 0.2);
 }
 
 ::selection {
     background-color: var(--highlight);
 }
 
-html body {
+html {
     scroll-behavior: smooth;
+}
+
+html body {
     background-color: var(--background);
     color: var(--foreground);
 }

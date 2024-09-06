@@ -39,50 +39,50 @@ export default function Header() {
     }
 
     return (
-        <header className="fixed top-0 bg-[--background] w-full h-[72px] px-8 py-6 z-10">
-            <NextLink href={"/#cover"} className="inline-flex items-center gap-2">
-                <PiStarFourFill className="w-4 h-4" />
-                <span className="font-display font-bold text-lg">Dang Tran</span>
-            </NextLink>
-            <div className="inline-flex items-center gap-6 float-right pt-0.5">
-                <div className="flex gap-6">
-                    <AnimatePresence>
-                        {!mobile && (
-                            <>
-                                {pageSections.map((section) => (
-                                    <motion.span
-                                        key={section}
-                                        initial={{ opacity: 0, translateX: 15, filter: "blur(3px)" }}
-                                        animate={{ opacity: 1, translateX: 0, filter: "blur(0px)" }}
-                                        exit={{ opacity: 0, translateX: 15, filter: "blur(3px)" }}
-                                    >
-                                        <Link title={section} href={`/#${section.toLowerCase()}`} />
-                                    </motion.span>
-                                ))}
-                            </>
-                        )}
-                    </AnimatePresence>
+        <>
+            <header className="fixed top-0 left-1/2 -translate-x-1/2 bg-[--background] w-full max-w-4xl h-[72px] px-8 py-6 z-20">
+                <NextLink href={"/#cover"} className="inline-flex items-center gap-2">
+                    <PiStarFourFill className="w-4 h-4" />
+                    <span className="font-display font-bold text-lg">Dang Tran</span>
+                </NextLink>
+                <div className="inline-flex items-center gap-6 float-right pt-0.5">
+                    <div className="flex gap-6">
+                        <AnimatePresence>
+                            {!mobile && (
+                                <>
+                                    {pageSections.map((section) => (
+                                        <motion.span
+                                            key={section}
+                                            initial={{ opacity: 0, translateX: 15, filter: "blur(3px)" }}
+                                            animate={{ opacity: 1, translateX: 0, filter: "blur(0px)" }}
+                                            exit={{ opacity: 0, translateX: 15, filter: "blur(3px)" }}
+                                        >
+                                            <Link title={section} href={`/#${section.toLowerCase()}`} />
+                                        </motion.span>
+                                    ))}
+                                </>
+                            )}
+                        </AnimatePresence>
+                    </div>
+                    {/* theme button */}
+                    <div className="w-6 h-6">
+                        {!mounted ? null :
+                            <button className="flex items-center justify-center" onClick={handleThemeChange}>
+                                <motion.span
+                                    initial={{ opacity: 0, filter: "blur(3px)" }}
+                                    animate={{ opacity: 1, filter: "blur(0px)" }}
+                                    transition={{ duration: 0.2 }}
+                                >
+                                    {theme === "dark"
+                                        ? <LuCloudMoon className="w-5 h-5" />
+                                        : <LuCloudSun className="w-5 h-5" />
+                                    }
+                                </motion.span>
+                            </button>
+                        }
+                    </div>
                 </div>
-                {/* theme button */}
-                <div className="w-6 h-6">
-                    {!mounted ? null :
-                        <button className="flex items-center justify-center" onClick={handleThemeChange}>
-                            <motion.span
-                                initial={{ opacity: 0, filter: "blur(3px)" }}
-                                animate={{ opacity: 1, filter: "blur(0px)" }}
-                                transition={{ duration: 0.2 }}
-                            >
-                                {theme === "dark"
-                                    ? <LuCloudMoon className="w-5 h-5" />
-                                    : <LuCloudSun className="w-5 h-5" />
-                                }
-                            </motion.span>
-                        </button>
-                    }
-                </div>
-            </div>
-            <div id="blur-overlay-top" className="absolute top-full left-0 bg-gradient-to-t from-transparent to-[--background] backdrop-blur-[1px] w-full h-[44px] z-10" />
-            <div id="blur-overlay-bottom" className="fixed bottom-0 left-0 bg-gradient-to-t from-[--background] to-transparent backdrop-blur-[1px] w-full h-[64px] z-10" />
+            </header>
 
             {/* mobile nav */}
             <span className="fixed bottom-0 left-1/2 -translate-x-1/2 z-20">
@@ -109,6 +109,6 @@ export default function Header() {
                     )}
                 </AnimatePresence>
             </span>
-        </header >
+        </>
     )
 }
