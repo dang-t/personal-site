@@ -23,7 +23,7 @@ export default function Tooltip({
             <AnimatePresence initial={false}>
                 {hovered && (
                     <motion.div
-                        className="hidden md:visible absolute mt-2 bg-[--background] p-1 border-[1px] border-black/20 dark:border-white/20 rounded origin-top-left z-50"
+                        className="hidden md:block absolute mt-2 bg-[--background] p-1 border-[1px] border-black/20 dark:border-white/20 rounded origin-top-left z-50"
                         initial={{ opacity: 0, scale: 0.9, filter: "blur(5px)" }}
                         animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
                         exit={{ opacity: 0, scale: 0, filter: "blur(5px)" }}
