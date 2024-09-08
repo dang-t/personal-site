@@ -8,7 +8,6 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        "text": ["var(--sf-pro-text-medium)"],
         "display": ["var(--sf-pro-display)"],
       },
       backgroundImage: {

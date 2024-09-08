@@ -1,11 +1,6 @@
 import LocalFont from "next/font/local";
 
 // custom local fonts
-export const textFont = LocalFont({
-    src: "../../public/fonts/SF-Pro-Text-Medium.otf",
-    variable: "--sf-pro-text-medium"
-})
-
 export const displayFont = LocalFont({
     src: [
         {

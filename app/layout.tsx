@@ -1,19 +1,19 @@
 import { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
-import { textFont, displayFont } from "./_lib/fonts";
+import { displayFont } from "./_lib/fonts";
 import "@/globals.css";
 
 export const metadata: Metadata = {
-    title: "Dang Tran"
+    title: "dang."
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang="en" suppressHydrationWarning>
             <head />
-            <body className={`${textFont.variable} ${displayFont.variable} font-text`}>
+            <body className={`${displayFont.variable} font-display`}>
                 <ThemeProvider attribute="class">
-                    <main>{children}</main>
+                    <main className="max-w-2xl mx-auto pt-48 px-12">{children}</main>
                 </ThemeProvider>
             </body>
         </html >
