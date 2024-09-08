@@ -5,13 +5,13 @@
 :root {
     --background: rgb(255, 255, 255);
     --foreground: rgb(0, 0, 0);
-    --highlight: rgb(0, 0, 0, 0.2);
+    --highlight: rgb(100, 100, 100);
 }
 
 :root.dark {
     --background: rgb(0, 0, 0);
     --foreground: rgb(255, 255, 255);
-    --highlight: rgb(255, 255, 255, 0.2);
+    --highlight: rgb(100, 100, 100);
 }
 
 ::selection {
