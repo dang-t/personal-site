@@ -5,12 +5,14 @@
 :root {
     --background: rgb(255, 255, 255);
     --foreground: rgb(0, 0, 0);
+    --foreground-light: rgb(125, 125, 125);
     --highlight: rgb(100, 100, 100);
 }
 
 :root.dark {
     --background: rgb(0, 0, 0);
     --foreground: rgb(255, 255, 255);
+    --foreground-light: rgb(150, 150, 150);
     --highlight: rgb(100, 100, 100);
 }
 
