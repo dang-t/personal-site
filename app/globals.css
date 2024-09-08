@@ -20,6 +20,10 @@
     background-color: var(--highlight);
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 html {
     scroll-behavior: smooth;
 }
